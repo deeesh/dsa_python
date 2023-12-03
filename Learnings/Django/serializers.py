@@ -25,9 +25,9 @@ class StudentSerializer(serializers.Serializer):
 from django.db import models
 
 class Student(models.Model):
-    name = serializers.CharField(max_length = 100)
-    roll = serializers.IntegerField()
-    city = serializers.CharField(max_length = 100)
+    name = models.CharField(max_length = 100)
+    roll = models.IntegerField()
+    city = models.CharField(max_length = 100)
 
 # is data ko jo frontend m store h ise json m convert krna h or client ko send krna h
 # or agar client se data aa rha h jo k json h use db m store krna h
