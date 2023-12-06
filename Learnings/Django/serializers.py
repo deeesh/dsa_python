@@ -1,8 +1,10 @@
 import json
-
+python_dict = {'age':23, 'add':'abcd gaon'}
 python_data = {'name':'Dipti', 'rollno':100}
 # todo To Convert Python to JSON use dump method
 json_data = json.dumps(python_data)
+js = json.dumps(python_dict)
+print(python_dict)
 # todo To Convert JSON to Python Object use loads method
 parsed_data = json.loads(json_data)
 
@@ -37,7 +39,7 @@ class Student(models.Model):
 # Creating Query Set
 stu = Student.objects.all()
 
-# Converting Query Set to stu to List of Python Dict/Serializing Query Set
+# Converting Query Set from stu to List of Python Dict/Serializing Query Set
 serializer = StudentSerializer(stu, many=True)
 print(serializer.data)
 
