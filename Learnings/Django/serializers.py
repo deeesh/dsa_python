@@ -39,7 +39,7 @@ class Student(models.Model):
 # Creating Query Set
 stu = Student.objects.all()
 
-# Converting Query Set from stu to List of Python Dict/Serializing Query Set
+# Converting Query Set stu to List of Python Dict/Serializing Query Set
 serializer = StudentSerializer(stu, many=True)
 print(serializer.data)
 
