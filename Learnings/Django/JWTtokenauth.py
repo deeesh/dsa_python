@@ -7,6 +7,7 @@
 # in urls.py  , --> from jwt views import Tokenobtaonpairviews, and , tokenrefreshview can also verify
 
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenVerifyView
+from django.urls import path
 urlpatterns = [
     path('gettoken/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('refreshtoken/', TokenRefreshView.as_view(), name='token_refresh'),
